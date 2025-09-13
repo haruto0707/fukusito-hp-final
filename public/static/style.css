@@ -112,37 +112,139 @@ body {
 /* Auto Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --gray-50: #1F2937;
-    --gray-100: #374151;
-    --gray-200: #4B5563;
-    --gray-300: #6B7280;
-    --gray-400: #9CA3AF;
-    --gray-500: #D1D5DB;
-    --gray-600: #E5E7EB;
-    --gray-700: #F3F4F6;
-    --gray-800: #F9FAFB;
-    --gray-900: #FFFFFF;
+    /* Dark theme color overrides */
+    --gray-50: #1F2937;   /* Dark background for light sections */
+    --gray-100: #374151;  /* Slightly lighter dark */
+    --gray-200: #4B5563;  /* Border color in dark */
+    --gray-300: #6B7280;  /* Muted text in dark */
+    --gray-400: #9CA3AF;  /* Secondary text */
+    --gray-500: #D1D5DB;  /* Primary text */
+    --gray-600: #E5E7EB;  /* Bright text */
+    --gray-700: #F3F4F6;  /* Very bright text */
+    --gray-800: #F9FAFB;  /* Near white */
+    --gray-900: #FFFFFF;  /* Pure white */
   }
 
   body {
-    background-color: #111827;
-    color: #FFFFFF;
+    background-color: #0F172A; /* Very dark blue-gray */
+    color: #F8FAFC; /* Almost white */
+  }
+  
+  /* Header in dark mode */
+  .header {
+    background: rgba(15, 23, 42, 0.95); /* Very dark with transparency */
+    border-bottom: 1px solid #334155;
   }
   
   .nav-brand .brand-link {
-    color: #FFFFFF;
+    color: #F8FAFC; /* Almost white */
   }
   
+  .nav-link {
+    color: #CBD5E1; /* Light gray */
+  }
+  
+  .nav-link:hover {
+    color: #F8FAFC; /* Almost white on hover */
+    background-color: #1E293B; /* Dark hover background */
+  }
+  
+  /* Sections in dark mode */
   .mission-section {
-    background: #1F2937;
+    background: #1E293B; /* Dark slate */
   }
   
   .product-section {
-    background: #111827;
+    background: #0F172A; /* Very dark */
   }
   
   .team-section {
-    background: #111827;
+    background: #0F172A; /* Very dark */
+  }
+  
+  .achievement-section {
+    background: #1E293B; /* Dark slate */
+  }
+  
+  /* Cards in dark mode */
+  .mission-card,
+  .team-card,
+  .timeline-content,
+  .feature-card {
+    background: #1E293B; /* Dark slate */
+    color: #F8FAFC; /* Almost white */
+    border: 1px solid #334155; /* Dark border */
+  }
+  
+  .mission-card h3,
+  .team-card h4,
+  .timeline-content h4,
+  .feature-card h4 {
+    color: #F8FAFC; /* Almost white for headings */
+  }
+  
+  .mission-card p,
+  .team-card .description,
+  .timeline-content p,
+  .feature-card p {
+    color: #CBD5E1; /* Light gray for body text */
+  }
+  
+  /* Role and other secondary text */
+  .role {
+    color: var(--primary-color); /* Keep brand color */
+  }
+  
+  /* Section headers */
+  .section-title {
+    color: #F8FAFC; /* Almost white */
+  }
+  
+  .section-subtitle {
+    color: #CBD5E1; /* Light gray */
+  }
+  
+  /* Product page specific */
+  .product-overview {
+    background: #0F172A;
+  }
+  
+  .overview-content h2 {
+    color: #F8FAFC;
+  }
+  
+  .lead {
+    color: #CBD5E1;
+  }
+  
+  .how-it-works {
+    background: #1E293B;
+  }
+  
+  .step-card h4 {
+    color: #F8FAFC;
+  }
+  
+  .step-card p {
+    color: #CBD5E1;
+  }
+  
+  .features-detail {
+    background: #0F172A;
+  }
+  
+  /* Phone mockup in dark mode */
+  .phone-frame {
+    background: #000000; /* Pure black for phone frame */
+  }
+  
+  /* Breadcrumb in dark mode */
+  .breadcrumb a {
+    color: rgba(248, 250, 252, 0.8);
+  }
+  
+  .breadcrumb a:hover {
+    color: #F8FAFC;
   }
 }
 

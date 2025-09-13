@@ -1,7 +1,11 @@
 import { Hono } from 'hono'
+import { serveStatic } from 'hono/cloudflare-workers'
 import { renderer } from './renderer'
 
 const app = new Hono()
+
+// Serve static files
+app.use('/static/*', serveStatic({ root: './public' }))
 
 app.use(renderer)
 

@@ -290,11 +290,7 @@ body {
   font-size: var(--text-xl);
 }
 
-.nav-brand .brand-logo {
-  height: 32px;
-  width: auto;
-  object-fit: contain;
-}
+
 
 .nav-brand i {
   color: var(--primary-color);
@@ -1003,12 +999,7 @@ section {
   margin-bottom: var(--space-lg);
 }
 
-.footer-brand .footer-logo {
-  height: 28px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(0) invert(1); /* 白に変換 */
-}
+
 
 .footer-brand i {
   color: var(--primary-color);

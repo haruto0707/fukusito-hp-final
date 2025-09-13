@@ -4,7 +4,7 @@ import { renderer } from './renderer'
 
 const app = new Hono()
 
-// Serve static files
+// Serve static files (CSS and JS)
 app.use('/static/*', serveStatic({ root: './public' }))
 
 app.use(renderer)

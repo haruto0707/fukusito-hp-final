@@ -214,33 +214,21 @@ app.get('/', (c) => {
                 </div>
               </div>
               <div className="member-info">
+                <h4>榊原 悠大</h4>
+                <p className="role">代表</p>
+                <p className="description">会社の全体戦略と事業推進を統括</p>
+              </div>
+            </div>
+            <div className="team-card">
+              <div className="member-photo">
+                <div className="photo-placeholder">
+                  <i className="fas fa-user"></i>
+                </div>
+              </div>
+              <div className="member-info">
                 <h4>伊丹 斉彬</h4>
-                <p className="role">代表・プロダクトマネージャー</p>
-                <p className="description">当事者視点を活かしたサービス設計を担当</p>
-              </div>
-            </div>
-            <div className="team-card">
-              <div className="member-photo">
-                <div className="photo-placeholder">
-                  <i className="fas fa-user"></i>
-                </div>
-              </div>
-              <div className="member-info">
-                <h4>稲葉 百音</h4>
-                <p className="role">技術責任者</p>
-                <p className="description">アプリ開発・システム設計を担当</p>
-              </div>
-            </div>
-            <div className="team-card">
-              <div className="member-photo">
-                <div className="photo-placeholder">
-                  <i className="fas fa-user"></i>
-                </div>
-              </div>
-              <div className="member-info">
-                <h4>加藤 貴大</h4>
-                <p className="role">デザイナー</p>
-                <p className="description">UI/UXデザイン・ブランディングを担当</p>
+                <p className="role">セールス</p>
+                <p className="description">営業戦略と顧客開拓を担当</p>
               </div>
             </div>
             <div className="team-card">
@@ -251,8 +239,8 @@ app.get('/', (c) => {
               </div>
               <div className="member-info">
                 <h4>清家 陸人</h4>
-                <p className="role">マーケティング</p>
-                <p className="description">市場分析・事業戦略を担当</p>
+                <p className="role">開発</p>
+                <p className="description">アプリ開発とシステム構築を担当</p>
               </div>
             </div>
             <div className="team-card">
@@ -263,8 +251,32 @@ app.get('/', (c) => {
               </div>
               <div className="member-info">
                 <h4>西岡 亮</h4>
-                <p className="role">ビジネス開発</p>
-                <p className="description">パートナーシップ・事業開発を担当</p>
+                <p className="role">マネジメント</p>
+                <p className="description">プロジェクト管理と組織運営を担当</p>
+              </div>
+            </div>
+            <div className="team-card">
+              <div className="member-photo">
+                <div className="photo-placeholder">
+                  <i className="fas fa-user"></i>
+                </div>
+              </div>
+              <div className="member-info">
+                <h4>稲葉 百音</h4>
+                <p className="role">イベント企画</p>
+                <p className="description">イベントの企画・運営とプロモーションを担当</p>
+              </div>
+            </div>
+            <div className="team-card">
+              <div className="member-photo">
+                <div className="photo-placeholder">
+                  <i className="fas fa-user"></i>
+                </div>
+              </div>
+              <div className="member-info">
+                <h4>加藤 貴大</h4>
+                <p className="role">コミュニケーションプロモーター</p>
+                <p className="description">PR・広報活動とブランディングを担当</p>
               </div>
             </div>
           </div>

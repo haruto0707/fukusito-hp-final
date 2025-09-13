@@ -121,14 +121,14 @@ export const renderer = jsxRenderer(({ children }) => {
               <div className="footer-section">
                 <h4>フォローする</h4>
                 <div className="social-links">
-                  <a href="#" className="social-link" aria-label="Twitter">
-                    <i className="fab fa-twitter"></i>
+                  <a href="https://x.com/FukusITo_" className="social-link" aria-label="X (旧Twitter)" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-x-twitter"></i>
                   </a>
-                  <a href="#" className="social-link" aria-label="Facebook">
+                  <a href="https://www.facebook.com/profile.php?id=61578296602292" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-facebook"></i>
                   </a>
-                  <a href="#" className="social-link" aria-label="LinkedIn">
-                    <i className="fab fa-linkedin"></i>
+                  <a href="https://www.instagram.com/fukusito/" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-instagram"></i>
                   </a>
                 </div>
               </div>

@@ -307,6 +307,291 @@ app.get('/', (c) => {
   )
 })
 
+// Product detail page
+app.get('/product-helpconnect', (c) => {
+  return c.render(
+    <div>
+      {/* Hero Section */}
+      <section className="product-hero">
+        <div className="container">
+          <div className="hero-content">
+            <div className="breadcrumb">
+              <a href="/">ホーム</a>
+              <span>/</span>
+              <span>HELP CONNECT</span>
+            </div>
+            <h1 className="product-title">
+              HELP CONNECT
+              <span className="product-subtitle">外出先での「ちょっとした困りごと」を解決するアプリ</span>
+            </h1>
+            <div className="product-badges">
+              <span className="badge badge-new">新機能</span>
+              <span className="badge badge-free">無料</span>
+              <span className="badge badge-featured">注目</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Overview */}
+      <section className="product-overview">
+        <div className="container">
+          <div className="overview-grid">
+            <div className="overview-content">
+              <h2>製品概要</h2>
+              <p className="lead">
+                HELP CONNECTは、障害のある方が外出先で困った際に、近くにいるサポーターに助けを求めることができるマッチングアプリです。
+                リアルタイムの位置情報を活用し、安心・安全なコミュニケーションを実現します。
+              </p>
+              <ul className="feature-list">
+                <li>
+                  <i className="fas fa-map-marker-alt"></i>
+                  <span>GPS位置情報による最適なマッチング</span>
+                </li>
+                <li>
+                  <i className="fas fa-shield-alt"></i>
+                  <span>安心・安全なコミュニケーション機能</span>
+                </li>
+                <li>
+                  <i className="fas fa-users"></i>
+                  <span>サポーター・利用者双方向の評価システム</span>
+                </li>
+                <li>
+                  <i className="fas fa-clock"></i>
+                  <span>リアルタイム通知とレスポンス</span>
+                </li>
+              </ul>
+            </div>
+            <div className="overview-visual">
+              <div className="app-showcase">
+                <div className="phone-container">
+                  <div className="phone-frame">
+                    <div className="phone-screen">
+                      <div className="app-interface">
+                        <div className="app-header">
+                          <div className="status-bar"></div>
+                          <h3>HELP CONNECT</h3>
+                        </div>
+                        <div className="app-main">
+                          <div className="help-request-card">
+                            <h4>助けを求める</h4>
+                            <div className="request-options">
+                              <div className="option-card active">
+                                <i className="fas fa-wheelchair"></i>
+                                <span>移動のサポート</span>
+                              </div>
+                              <div className="option-card">
+                                <i className="fas fa-eye"></i>
+                                <span>視覚的サポート</span>
+                              </div>
+                              <div className="option-card">
+                                <i className="fas fa-hands-helping"></i>
+                                <span>その他のサポート</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="nearby-supporters">
+                            <h5>近くのサポーター</h5>
+                            <div className="supporter-list">
+                              <div className="supporter-item">
+                                <div className="supporter-avatar"></div>
+                                <div className="supporter-info">
+                                  <span className="name">田中さん</span>
+                                  <span className="distance">約100m</span>
+                                  <div className="rating">
+                                    <i className="fas fa-star"></i>
+                                    <span>4.8</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="supporter-item">
+                                <div className="supporter-avatar"></div>
+                                <div className="supporter-info">
+                                  <span className="name">佐藤さん</span>
+                                  <span className="distance">約200m</span>
+                                  <div className="rating">
+                                    <i className="fas fa-star"></i>
+                                    <span>4.9</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it Works */}
+      <section className="how-it-works">
+        <div className="container">
+          <div className="section-header">
+            <h2>ご利用の流れ</h2>
+            <p>簡単3ステップで、必要なサポートを受けることができます</p>
+          </div>
+          <div className="steps-grid">
+            <div className="step-card">
+              <div className="step-number">1</div>
+              <div className="step-icon">
+                <i className="fas fa-mobile-alt"></i>
+              </div>
+              <h4>アプリを開く</h4>
+              <p>HELP CONNECTアプリを起動し、現在地を確認します</p>
+            </div>
+            <div className="step-arrow">
+              <i className="fas fa-arrow-right"></i>
+            </div>
+            <div className="step-card">
+              <div className="step-number">2</div>
+              <div className="step-icon">
+                <i className="fas fa-hand-paper"></i>
+              </div>
+              <h4>サポートを要請</h4>
+              <p>必要なサポートの種類を選択し、助けを求めます</p>
+            </div>
+            <div className="step-arrow">
+              <i className="fas fa-arrow-right"></i>
+            </div>
+            <div className="step-card">
+              <div className="step-number">3</div>
+              <div className="step-icon">
+                <i className="fas fa-handshake"></i>
+              </div>
+              <h4>サポーターと連携</h4>
+              <p>近くのサポーターとマッチングし、安全にサポートを受けます</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="features-detail">
+        <div className="container">
+          <div className="section-header">
+            <h2>主要機能</h2>
+            <p>HELP CONNECTの充実した機能をご紹介します</p>
+          </div>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">
+                <i className="fas fa-map-marker-alt"></i>
+              </div>
+              <h4>位置情報マッチング</h4>
+              <p>
+                GPS機能を活用して、お困りの方の近くにいるサポーターを自動で検索・マッチング。
+                効率的で迅速な支援を実現します。
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <i className="fas fa-comments"></i>
+              </div>
+              <h4>安全なチャット機能</h4>
+              <p>
+                アプリ内チャットシステムにより、個人情報を交換することなく、
+                安心してコミュニケーションを取ることができます。
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <i className="fas fa-star"></i>
+              </div>
+              <h4>相互評価システム</h4>
+              <p>
+                利用者・サポーター双方の評価システムにより、
+                信頼性の高いコミュニティを維持します。
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <i className="fas fa-bell"></i>
+              </div>
+              <h4>リアルタイム通知</h4>
+              <p>
+                プッシュ通知機能により、サポート要請や応答を
+                リアルタイムで受け取ることができます。
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <i className="fas fa-history"></i>
+              </div>
+              <h4>利用履歴管理</h4>
+              <p>
+                過去の利用履歴を確認でき、よく利用する場所や
+                サポーターとの関係性を把握できます。
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <i className="fas fa-cog"></i>
+              </div>
+              <h4>カスタマイズ設定</h4>
+              <p>
+                個人のニーズに合わせて通知設定やプロフィール情報を
+                カスタマイズできます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics */}
+      <section className="statistics">
+        <div className="container">
+          <div className="stats-grid">
+            <div className="stat-card">
+              <div className="stat-number">280+</div>
+              <div className="stat-label">実証実験参加者</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">3回</div>
+              <div className="stat-label">実施回数</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">95%</div>
+              <div className="stat-label">満足度</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">24/7</div>
+              <div className="stat-label">サービス提供時間</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="product-cta">
+        <div className="container">
+          <div className="cta-content">
+            <h2>HELP CONNECTを始めませんか？</h2>
+            <p>
+              より良い社会の実現に向けて、一緒に歩んでいきましょう。<br />
+              アプリのダウンロードやご質問は、お気軽にお問い合わせください。
+            </p>
+            <div className="cta-buttons">
+              <a href="#" className="btn btn-primary btn-large">
+                <i className="fas fa-download"></i>
+                アプリをダウンロード
+              </a>
+              <a href="mailto:contact@fukusito.net" className="btn btn-secondary btn-large">
+                <i className="fas fa-envelope"></i>
+                お問い合わせ
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+})
+
 // API routes
 app.get('/api/health', (c) => {
   return c.json({ status: 'ok', timestamp: new Date().toISOString() })

@@ -18,7 +18,7 @@ app.get('/', (c) => {
           <div className="hero-content">
             <h1 className="hero-title">
               福祉と技術で、<br />
-              <span className="text-gradient">未来を照らす。</span>
+              <span className="hero-highlight">未来を照らす。</span>
             </h1>
             <p className="hero-description">
               FukusIToは、テクノロジーで社会課題を解決するスタートアップです。<br />
@@ -287,6 +287,179 @@ app.get('/', (c) => {
         </div>
       </section>
 
+      {/* CEO Message Section */}
+      <section className="ceo-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">代表メッセージ</h2>
+            <p className="section-subtitle">
+              FukusIToの想いと未来への展望
+            </p>
+          </div>
+          <div className="ceo-content">
+            <div className="ceo-profile">
+              <div className="ceo-photo">
+                <div className="photo-placeholder">
+                  <i className="fas fa-user-tie"></i>
+                </div>
+              </div>
+              <div className="ceo-info">
+                <h3>榊原 悠大</h3>
+                <p className="ceo-title">代表取締役</p>
+                <div className="ceo-details">
+                  <p><strong>所属：</strong>名城大学情報工学部4年</p>
+                  <p><strong>専攻：</strong>医療情報</p>
+                  <p><strong>進路：</strong>来年同大学大学院進学予定</p>
+                </div>
+              </div>
+            </div>
+            <div className="ceo-story">
+              <div className="story-section">
+                <h4>私の歩み</h4>
+                <p>
+                  シャルコーマリートゥース病と呼ばれる末梢神経障害があり、小学5年生から車椅子生活を送っています。
+                  大学3年生の時に参加したビジネスコンテストをきっかけにFukusIToをスタートし、
+                  同時にスタートアップの世界に入り現在勉強中です。
+                </p>
+              </div>
+              <div className="story-section">
+                <h4>FukusIToへの想い</h4>
+                <p>
+                  FukusIToを立ち上げた思いは、自分がいままで困ったことに対してソリューションを創造することで、
+                  この世界にいる誰かの「困った」を1つでも減らしたいというものです。
+                </p>
+                <p>
+                  自分はいままで多くの人に助けられてきました。だからこそ助け合いの重要性が身に染みてわかります。
+                  自分にも「助けられるだけでなく、誰かを助けたい」という思いが常にありますが、
+                  自分にできることには限りがあります。
+                </p>
+                <p>
+                  だからサービス提供という形で社会課題に挑戦することで、
+                  明日困る誰かが救われたら良いなという思いがあります。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Activities Section */}
+      <section className="activities-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">FukusIToの活動</h2>
+            <p className="section-subtitle">
+              これまでの歩みと今後の展望
+            </p>
+          </div>
+          <div className="activities-content">
+            <div className="activities-grid">
+              <div className="activity-category">
+                <h3>これまでの活動</h3>
+                <div className="activity-list">
+                  <div className="activity-item">
+                    <div className="activity-icon">
+                      <i className="fas fa-trophy"></i>
+                    </div>
+                    <div className="activity-info">
+                      <h4>NAGOYA BOOST 10000</h4>
+                      <p>優秀賞 + 一般投票賞を獲得</p>
+                      <span className="activity-desc">
+                        FukusITo始動のきっかけとなる半年間に及ぶビジネス創出イベントの最終発表にて受賞
+                      </span>
+                    </div>
+                  </div>
+                  <div className="activity-item">
+                    <div className="activity-icon">
+                      <i className="fas fa-users"></i>
+                    </div>
+                    <div className="activity-info">
+                      <h4>各種ビジネスコンテスト参加</h4>
+                      <p>Dragon Gate、Garage Challengeなど</p>
+                      <span className="activity-desc">
+                        様々なビジネスコンテストに参加し、事業のブラッシュアップを継続
+                      </span>
+                    </div>
+                  </div>
+                  <div className="activity-item">
+                    <div className="activity-icon">
+                      <i className="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div className="activity-info">
+                      <h4>名城大学にて授業実施</h4>
+                      <p>280名の前で講義・実証実験を実施</p>
+                      <span className="activity-desc">
+                        経済学部の講義「障がい者と社会」にて登壇し、実証実験を行いました
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="activity-category">
+                <h3>現在活動中</h3>
+                <div className="activity-list">
+                  <div className="activity-item">
+                    <div className="activity-icon">
+                      <i className="fas fa-lightbulb"></i>
+                    </div>
+                    <div className="activity-info">
+                      <h4>名古屋大学 Common Nexus</h4>
+                      <p>「ねのねプログラム」参加中</p>
+                      <span className="activity-desc">
+                        展示・イベント開催などを積極的に行っています
+                      </span>
+                    </div>
+                  </div>
+                  <div className="activity-item">
+                    <div className="activity-icon">
+                      <i className="fas fa-rocket"></i>
+                    </div>
+                    <div className="activity-info">
+                      <h4>Aichi Start-up Battle</h4>
+                      <p>愛知県主催の大規模ビジネスコンテスト</p>
+                      <span className="activity-desc">
+                        採択され、現在参加中です
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="activity-category">
+                <h3>今後の活動</h3>
+                <div className="activity-list">
+                  <div className="activity-item">
+                    <div className="activity-icon">
+                      <i className="fas fa-running"></i>
+                    </div>
+                    <div className="activity-info">
+                      <h4>スポーツ団体との連携</h4>
+                      <p>会場内の互助促進目的でのサービス利用</p>
+                      <span className="activity-desc">
+                        スポーツイベントでの助け合い文化の促進を目指します
+                      </span>
+                    </div>
+                  </div>
+                  <div className="activity-item">
+                    <div className="activity-icon">
+                      <i className="fas fa-building"></i>
+                    </div>
+                    <div className="activity-info">
+                      <h4>会社登記</h4>
+                      <p>法人化による事業拡大</p>
+                      <span className="activity-desc">
+                        より本格的な事業展開に向けて準備を進めています
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
@@ -300,8 +473,8 @@ app.get('/', (c) => {
                 お問い合わせ
               </a>
               <a href="/product-helpconnect" className="btn btn-secondary btn-large">
-                <i className="fas fa-download"></i>
-                アプリをダウンロード
+                <i className="fas fa-info-circle"></i>
+                FukusIToのサービスについて
               </a>
             </div>
           </div>
@@ -577,12 +750,12 @@ app.get('/product-helpconnect', (c) => {
             <h2>HELP CONNECTを始めませんか？</h2>
             <p>
               より良い社会の実現に向けて、一緒に歩んでいきましょう。<br />
-              アプリのダウンロードやご質問は、お気軽にお問い合わせください。
+              サービスの詳細やご質問は、お気軽にお問い合わせください。
             </p>
             <div className="cta-buttons">
-              <a href="#" className="btn btn-primary btn-large">
-                <i className="fas fa-download"></i>
-                アプリをダウンロード
+              <a href="/product-helpconnect" className="btn btn-primary btn-large">
+                <i className="fas fa-info-circle"></i>
+                FukusIToのサービスについて
               </a>
               <a href="mailto:contact@fukusito.net" className="btn btn-secondary btn-large">
                 <i className="fas fa-envelope"></i>

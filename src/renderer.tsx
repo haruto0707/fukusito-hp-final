@@ -61,8 +61,7 @@ export const renderer = jsxRenderer(({ children }) => {
               <div className="nav-content">
                 <div className="nav-brand">
                   <a href="/" className="brand-link">
-                    <i className="fas fa-heart"></i>
-                    <span>FukusITo</span>
+                    <img src="/static/logo.png" alt="FukusITo ロゴ" className="brand-logo" />
                   </a>
                 </div>
                 <div className="nav-menu" id="nav-menu">
@@ -96,8 +95,7 @@ export const renderer = jsxRenderer(({ children }) => {
               <div className="footer-section">
                 <div className="footer-brand">
                   <div className="brand-logo">
-                    <i className="fas fa-heart"></i>
-                    <span>FukusITo</span>
+                    <img src="/static/logo.png" alt="FukusITo ロゴ" className="footer-logo" />
                   </div>
                   <p>テクノロジーで社会課題を解決し、<br />誰もが活躍できる社会を目指します。</p>
                 </div>

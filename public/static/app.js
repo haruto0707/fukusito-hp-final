@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeIntersectionObserver();
     initializeAnimations();
     initializeAccessibility();
+    initializeLogoBackgroundRemoval();
     
     // Log performance metrics
     logPerformanceMetrics();
@@ -184,3 +185,47 @@ async function checkAPIHealth() {
 }
 
 checkAPIHealth();
+
+// Logo background removal
+function initializeLogoBackgroundRemoval() {
+    const logos = document.querySelectorAll('.brand-logo, .footer-logo');
+    
+    logos.forEach(logo => {
+        // 画像が読み込まれた後に処理
+        logo.addEventListener('load', function() {
+            // 黒い背景を除去するための処理
+            this.style.filter = 'contrast(1.2) brightness(1.1)';
+            
+            // ダークモードの場合は異なる処理
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                this.style.filter = 'brightness(1.5) contrast(1.3) invert(0.1)';
+                this.style.mixBlendMode = 'screen';
+            } else {
+                this.style.mixBlendMode = 'multiply';
+            }
+        });
+        
+        // 既に読み込まれている場合は即座に処理
+        if (logo.complete && logo.naturalHeight !== 0) {
+            logo.dispatchEvent(new Event('load'));
+        }
+    });
+    
+    // ダークモードの切り替えを監視
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        logos.forEach(logo => {
+            if (e.matches) {
+                // ダークモードに切り替わった
+                logo.style.filter = 'brightness(1.5) contrast(1.3) invert(0.1)';
+                logo.style.mixBlendMode = 'screen';
+            } else {
+                // ライトモードに切り替わった
+                logo.style.filter = 'contrast(1.2) brightness(1.1)';
+                logo.style.mixBlendMode = 'multiply';
+            }
+        });
+    });
+}
+
+// Initialize logo background removal
+initializeLogoBackgroundRemoval();

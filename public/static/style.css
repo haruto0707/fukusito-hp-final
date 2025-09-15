@@ -344,33 +344,44 @@ body {
 
 
 
-.nav-brand .brand-logo {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-  /* 背景を透明にする処理 */
-  mix-blend-mode: multiply;
-  filter: contrast(1.2) brightness(1.1);
+/* Text Logo Styles for Header */
+.brand-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
 }
 
-/* 黒背景を除去する処理 */
-.nav-brand .brand-logo {
-  /* 黒い背景を透明にする */
-  background: transparent;
-  border-radius: var(--radius-md);
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  margin: 0;
 }
 
-/* より強力な背景除去 */
-.nav-brand .brand-logo.transparent-bg {
-  mask: radial-gradient(circle, black 45%, transparent 55%);
-  -webkit-mask: radial-gradient(circle, black 45%, transparent 55%);
+.brand-tagline {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-top: -2px;
+  letter-spacing: 0.05em;
 }
 
-/* ダークモード時のロゴ処理 */
+/* Dark mode support for text logo */
 @media (prefers-color-scheme: dark) {
-  .nav-brand .brand-logo {
-    mix-blend-mode: screen;
-    filter: brightness(1.5) contrast(1.3) invert(0.1);
+  .brand-tagline {
+    color: var(--gray-400);
+  }
+  
+  .brand-name {
+    background: linear-gradient(135deg, #FF8A50, #4ADE80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
@@ -1071,39 +1082,56 @@ section {
   margin-bottom: var(--space-2xl);
 }
 
-.footer-brand .brand-logo {
+/* Text Logo Styles for Footer */
+.footer-logo-text {
   display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  font-size: var(--text-xl);
-  font-weight: 700;
-  color: white;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
   margin-bottom: var(--space-lg);
 }
 
-
-
-.footer-brand .footer-logo {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-  margin-bottom: var(--space-md);
-  /* 背景を透明にする処理 */
-  mix-blend-mode: multiply;
-  filter: contrast(1.2) brightness(1.1);
+.footer-brand-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* フッターロゴの黒背景除去 */
-.footer-brand .footer-logo {
-  background: transparent;
-  border-radius: var(--radius-md);
+.footer-brand-tagline {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 2px;
+  letter-spacing: 0.05em;
 }
 
-/* ダークモード時のフッターロゴ処理 */
+/* Hover effects for brand links */
+.brand-link {
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.brand-link:hover {
+  transform: translateY(-1px);
+}
+
+.brand-link:hover .brand-name {
+  background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode hover effect */
 @media (prefers-color-scheme: dark) {
-  .footer-brand .footer-logo {
-    mix-blend-mode: screen;
-    filter: brightness(1.5) contrast(1.3) invert(0.1);
+  .brand-link:hover .brand-name {
+    background: linear-gradient(135deg, #FF6B35, #22C55E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
@@ -2499,5 +2527,22 @@ a:focus {
   .contact-form-section {
     margin: 0 var(--space-md);
     padding: var(--space-lg);
+  }
+  
+  /* Mobile text logo adjustments */
+  .brand-name {
+    font-size: 1.3rem;
+  }
+  
+  .brand-tagline {
+    font-size: 0.65rem;
+  }
+  
+  .footer-brand-name {
+    font-size: 1.5rem;
+  }
+  
+  .footer-brand-tagline {
+    font-size: 0.75rem;
   }
 }

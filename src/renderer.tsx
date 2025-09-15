@@ -112,8 +112,16 @@ export const renderer = jsxRenderer(({ children }) => {
                 <h4>会社情報</h4>
                 <ul>
                   <li><a href="#team">チームについて</a></li>
-                  <li><a href="mailto:contact@fukusito.net">お問い合わせ</a></li>
+                  <li><a href="/contact">お問い合わせ</a></li>
+                  <li><a href="mailto:info@fukusito.net">メールでのお問い合わせ</a></li>
+                </ul>
+              </div>
+              <div className="footer-section">
+                <h4>法的情報</h4>
+                <ul>
                   <li><a href="/privacy">プライバシーポリシー</a></li>
+                  <li><a href="/terms">利用規約</a></li>
+                  <li><a href="/commercial">特定商取引法に基づく表記</a></li>
                 </ul>
               </div>
               <div className="footer-section">

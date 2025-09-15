@@ -229,3 +229,100 @@ function initializeLogoBackgroundRemoval() {
 
 // Initialize logo background removal
 initializeLogoBackgroundRemoval();
+
+// Contact Form Functionality
+function initializeContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (!contactForm) return;
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const data = {};
+        
+        for (let [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+        
+        // Basic validation
+        if (!data.name || !data.email || !data.category || !data.subject || !data.message) {
+            alert('必須項目をすべて入力してください。');
+            return;
+        }
+        
+        if (!data['privacy-agreement']) {
+            alert('プライバシーポリシーに同意していただく必要があります。');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+            alert('正しいメールアドレスを入力してください。');
+            return;
+        }
+        
+        // Show loading state
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
+        submitButton.disabled = true;
+        
+        // Simulate form submission (in a real app, this would send to a server)
+        setTimeout(() => {
+            // Create mailto link with form data
+            const subject = encodeURIComponent(`[${data.category}] ${data.subject}`);
+            const body = encodeURIComponent(
+                `お名前: ${data.name}\n` +
+                `メールアドレス: ${data.email}\n` +
+                `電話番号: ${data.phone || '未入力'}\n` +
+                `会社名・団体名: ${data.organization || '未入力'}\n` +
+                `お問い合わせ種別: ${data.category}\n` +
+                `件名: ${data.subject}\n\n` +
+                `お問い合わせ内容:\n${data.message}\n\n` +
+                `---\n` +
+                `このメールはFukusIToウェブサイトのお問い合わせフォームから送信されました。`
+            );
+            
+            // Open default email client
+            window.location.href = `mailto:info@fukusito.net?subject=${subject}&body=${body}`;
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Show success message
+            alert('お問い合わせフォームの内容でメールクライアントを開きました。メールを送信してください。');
+            
+            // Reset button
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+            
+        }, 1000);
+    });
+    
+    // Auto-fill email based on category selection
+    const categorySelect = document.getElementById('category');
+    if (categorySelect) {
+        categorySelect.addEventListener('change', function() {
+            const emailMap = {
+                'general': 'info@fukusito.net',
+                'support': 'support@fukusito.net',
+                'business': 'business@fukusito.net',
+                'privacy': 'legal@fukusito.net'
+            };
+            
+            // This is just for reference - the actual mailto will always use info@fukusito.net
+            // but we could show a note about which department will handle it
+        });
+    }
+}
+
+// Initialize contact form when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeContactForm);
+} else {
+    initializeContactForm();
+}

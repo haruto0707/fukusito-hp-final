@@ -905,8 +905,7 @@ app.get('/privacy', (c) => {
               <p>本プライバシーポリシーに関するお問い合わせは、以下までご連絡ください。</p>
               <div className="contact-info">
                 <p><strong>株式会社FukusITo</strong></p>
-                <p>メール：<a href="mailto:privacy@fukusito.net">privacy@fukusito.net</a></p>
-                <p>電話：052-XXX-XXXX（平日 9:00-18:00）</p>
+                <p>メール：<a href="mailto:contact@fukusito.net">contact@fukusito.net</a></p>
               </div>
             </div>
           </div>
@@ -1040,8 +1039,7 @@ app.get('/terms', (c) => {
               <p>本利用規約に関するお問い合わせは、以下までご連絡ください。</p>
               <div className="contact-info">
                 <p><strong>株式会社FukusITo</strong></p>
-                <p>メール：<a href="mailto:legal@fukusito.net">legal@fukusito.net</a></p>
-                <p>電話：052-XXX-XXXX（平日 9:00-18:00）</p>
+                <p>メール：<a href="mailto:contact@fukusito.net">contact@fukusito.net</a></p>
               </div>
             </div>
           </div>

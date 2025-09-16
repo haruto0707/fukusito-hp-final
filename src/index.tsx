@@ -17,7 +17,7 @@ app.get('/', (c) => {
         <div className="container">
           <div className="hero-content">
             <h1 className="hero-title">
-              福祉と技術で、<br />
+              フクシトで、<br />
               <span className="hero-highlight">未来を照らす。</span>
             </h1>
             <p className="hero-description">

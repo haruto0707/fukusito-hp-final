@@ -63,7 +63,7 @@ export const renderer = jsxRenderer(({ children }) => {
                   <a href="/" className="brand-link">
                     <span className="brand-logo-text">
                       <span className="brand-name">FukusITo</span>
-                      <span className="brand-tagline">福祉と技術</span>
+                      <span className="brand-tagline">フクシト</span>
                     </span>
                   </a>
                 </div>
@@ -99,7 +99,7 @@ export const renderer = jsxRenderer(({ children }) => {
                 <div className="footer-brand">
                   <div className="footer-logo-text">
                     <span className="footer-brand-name">FukusITo</span>
-                    <span className="footer-brand-tagline">福祉と技術</span>
+                    <span className="footer-brand-tagline">フクシト</span>
                   </div>
                   <p>テクノロジーで社会課題を解決し、<br />誰もが活躍できる社会を目指します。</p>
                 </div>

@@ -56,7 +56,11 @@ for (const page of pages) {
     const response = await app.fetch(request);
     
     if (response.ok) {
-      const html = await response.text();
+      let html = await response.text();
+      
+      // Fix static file paths for relative URLs
+      html = html.replace(/href="\/static\//g, 'href="./static/');
+      html = html.replace(/src="\/static\//g, 'src="./static/');
       
       // Write HTML file
       fs.writeFileSync(path.join(staticDir, page.filename), html);
@@ -75,10 +79,27 @@ const htaccess = `
 # FukusITo Website - Apache Configuration
 RewriteEngine On
 
-# Remove .html extension from URLs
+# Remove .html extension from URLs (only if mod_rewrite is available)
+<IfModule mod_rewrite.c>
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+</IfModule>
+
+# Directory browsing security
+Options -Indexes
+
+# Protect sensitive files
+<Files ~ "^\.">
+Order allow,deny
+Deny from all
+</Files>
+
+# MIME type for CSS and JS files
+<IfModule mod_mime.c>
+AddType text/css .css
+AddType application/javascript .js
+</IfModule>
 
 # Cache static assets
 <IfModule mod_expires.c>
@@ -92,7 +113,7 @@ ExpiresByType image/gif "access plus 1 month"
 ExpiresByType image/svg+xml "access plus 1 month"
 </IfModule>
 
-# Enable compression
+# Enable compression (if mod_deflate is available)
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/html
@@ -105,12 +126,16 @@ AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
 
-# Security headers
+# Security headers (if mod_headers is available)
 <IfModule mod_headers.c>
 Header always set X-Frame-Options DENY
 Header always set X-Content-Type-Options nosniff
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
+# Fallback for servers without URL rewriting
+# Direct access to HTML files will still work
+DirectoryIndex index.html
 `;
 
 fs.writeFileSync(path.join(staticDir, '.htaccess'), htaccess.trim());

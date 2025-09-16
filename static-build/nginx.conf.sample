@@ -1,0 +1,22 @@
+# FukusITo Website - Nginx Configuration Sample
+# Place this in your server block
+
+location / {
+    try_files $uri $uri.html $uri/ =404;
+}
+
+# Remove .html extension from URLs
+location ~ ^/(.*).html$ {
+    return 301 /$1;
+}
+
+# Cache static assets
+location ~* \.(css|js|png|jpg|jpeg|gif|ico|svg)$ {
+    expires 1M;
+    add_header Cache-Control "public, immutable";
+}
+
+# Security headers
+add_header X-Frame-Options DENY;
+add_header X-Content-Type-Options nosniff;
+add_header Referrer-Policy "strict-origin-when-cross-origin";

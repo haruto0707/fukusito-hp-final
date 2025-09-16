@@ -1051,7 +1051,151 @@ app.get('/terms', (c) => {
   )
 })
 
-// Commercial Transaction Act Page - Removed (pre-incorporation startup)
+// Commercial Transaction Act Page
+app.get('/commercial', (c) => {
+  return c.render(
+    <div>
+      <section className="legal-hero">
+        <div className="container">
+          <div className="hero-content">
+            <div className="breadcrumb">
+              <a href="/">ホーム</a>
+              <span>/</span>
+              <span>特定商取引法に基づく表記</span>
+            </div>
+            <h1 className="legal-title">
+              <i className="fas fa-briefcase"></i>
+              特定商取引法に基づく表記
+            </h1>
+            <p className="legal-subtitle">
+              法律に基づく事業者情報の表示
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="legal-content">
+        <div className="container">
+          <div className="legal-document">
+            <div className="document-info">
+              <p><strong>制定日：</strong>2025年9月15日</p>
+              <p><strong>最終更新日：</strong>2025年9月15日</p>
+            </div>
+
+            <div className="legal-section">
+              <h2>事業者情報</h2>
+              <div className="info-table">
+                <div className="info-row">
+                  <div className="info-label">事業者名</div>
+                  <div className="info-value">株式会社FukusITo</div>
+                </div>
+                <div className="info-row">
+                  <div className="info-label">代表者</div>
+                  <div className="info-value">代表取締役 榊原 悠大</div>
+                </div>
+                <div className="info-row">
+                  <div className="info-label">所在地</div>
+                  <div className="info-value">
+                    〒XXX-XXXX<br />
+                    愛知県名古屋市○○区○○○○<br />
+                    ○○ビル○階
+                  </div>
+                </div>
+                <div className="info-row">
+                  <div className="info-label">電話番号</div>
+                  <div className="info-value">052-XXX-XXXX</div>
+                </div>
+                <div className="info-row">
+                  <div className="info-label">メールアドレス</div>
+                  <div className="info-value">
+                    <a href="mailto:info@fukusito.net">info@fukusito.net</a>
+                  </div>
+                </div>
+                <div className="info-row">
+                  <div className="info-label">ウェブサイト</div>
+                  <div className="info-value">
+                    <a href="https://fukusito.net">https://fukusito.net</a>
+                  </div>
+                </div>
+                <div className="info-row">
+                  <div className="info-label">事業内容</div>
+                  <div className="info-value">
+                    • アプリケーションの企画・開発・運営<br />
+                    • 福祉支援システムの提供<br />
+                    • ITコンサルティングサービス
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="legal-section">
+              <h2>販売価格</h2>
+              <p>
+                各サービス・商品の価格は、それぞれの販売ページに表示いたします。<br />
+                価格は税込み表示となっております。
+              </p>
+            </div>
+
+            <div className="legal-section">
+              <h2>支払方法</h2>
+              <p>以下の支払方法をご利用いただけます：</p>
+              <ul>
+                <li>クレジットカード決済（Visa、MasterCard、JCB、American Express、Diners Club）</li>
+                <li>銀行振込（振込手数料はお客様負担）</li>
+                <li>その他、サービスページに記載の支払方法</li>
+              </ul>
+            </div>
+
+            <div className="legal-section">
+              <h2>商品・サービスの引渡時期</h2>
+              <p>
+                デジタルコンテンツ・サービス：決済完了後、即座にご利用可能<br />
+                その他商品・サービス：各商品ページに記載された期間内に提供
+              </p>
+            </div>
+
+            <div className="legal-section">
+              <h2>返品・キャンセル・返金について</h2>
+              <p>
+                デジタルコンテンツの性質上、原則として返品・返金はお受けできませんが、
+                以下の場合には返金対応を行います：
+              </p>
+              <ul>
+                <li>当社の責任によりサービスが提供できない場合</li>
+                <li>システム障害等により長期間サービスが利用できない場合</li>
+                <li>その他、当社が妥当と判断した場合</li>
+              </ul>
+              <p>
+                返金をご希望の場合は、下記連絡先までお問い合わせください。
+                審査の上、当社が承認した場合のみ返金いたします。
+              </p>
+            </div>
+
+            <div className="legal-section">
+              <h2>個人情報の取扱い</h2>
+              <p>
+                お客様の個人情報については、当社の
+                <a href="/privacy" className="text-link">「プライバシーポリシー」</a>
+                に従って適切に取り扱います。
+              </p>
+            </div>
+
+            <div className="legal-section">
+              <h2>お問い合わせ</h2>
+              <p>本表記に関するお問い合わせは、以下までご連絡ください。</p>
+              <div className="contact-info">
+                <p><strong>株式会社FukusITo カスタマーサポート</strong></p>
+                <p>メール：<a href="mailto:support@fukusito.net">support@fukusito.net</a></p>
+                <p>電話：052-XXX-XXXX（平日 9:00-18:00）</p>
+                <p>受付時間：平日9:00〜18:00（土日祝日、年末年始を除く）</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+})
 
 // Contact Page
 app.get('/contact', (c) => {
@@ -1089,7 +1233,9 @@ app.get('/contact', (c) => {
                 <h3>一般的なお問い合わせ</h3>
                 <p>サービスに関するご質問やご相談</p>
                 <div className="contact-methods">
-                  <p><strong>メール：</strong><a href="mailto:contact@fukusito.net">contact@fukusito.net</a></p>
+                  <p><strong>メール：</strong><a href="mailto:info@fukusito.net">info@fukusito.net</a></p>
+                  <p><strong>電話：</strong>052-XXX-XXXX</p>
+                  <p><strong>受付時間：</strong>平日 9:00-18:00</p>
                 </div>
               </div>
 
@@ -1100,7 +1246,8 @@ app.get('/contact', (c) => {
                 <h3>技術サポート</h3>
                 <p>HELP CONNECTアプリの使い方やトラブル</p>
                 <div className="contact-methods">
-                  <p><strong>メール：</strong><a href="mailto:contact@fukusito.net">contact@fukusito.net</a></p>
+                  <p><strong>メール：</strong><a href="mailto:support@fukusito.net">support@fukusito.net</a></p>
+                  <p><strong>受付時間：</strong>平日 10:00-17:00</p>
                 </div>
               </div>
 
@@ -1111,7 +1258,8 @@ app.get('/contact', (c) => {
                 <h3>事業提携・取材</h3>
                 <p>事業提携のご提案やメディア取材のご依頼</p>
                 <div className="contact-methods">
-                  <p><strong>メール：</strong><a href="mailto:contact@fukusito.net">contact@fukusito.net</a></p>
+                  <p><strong>メール：</strong><a href="mailto:business@fukusito.net">business@fukusito.net</a></p>
+                  <p><strong>担当：</strong>事業開発部</p>
                 </div>
               </div>
 
@@ -1122,7 +1270,8 @@ app.get('/contact', (c) => {
                 <h3>プライバシー・法務</h3>
                 <p>個人情報や法的事項に関するお問い合わせ</p>
                 <div className="contact-methods">
-                  <p><strong>メール：</strong><a href="mailto:contact@fukusito.net">contact@fukusito.net</a></p>
+                  <p><strong>メール：</strong><a href="mailto:legal@fukusito.net">legal@fukusito.net</a></p>
+                  <p><strong>担当：</strong>法務・コンプライアンス部</p>
                 </div>
               </div>
             </div>

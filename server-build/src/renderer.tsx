@@ -6,21 +6,21 @@ export const renderer = jsxRenderer(({ children }) => {
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>FukusITo</title>
+        <title>FukusITo - 福祉と技術で、未来を照らす。</title>
         <meta name="description" content="FukusIToは、テクノロジーで社会課題を解決するスタートアップです。HELP CONNECTアプリで、障害のある方の外出支援を行っています。" />
         <meta name="keywords" content="福祉,アクセシビリティ,バリアフリー,アプリ,スタートアップ,HELP CONNECT,障害者支援" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fukusito.net/" />
-        <meta property="og:title" content="FukusITo" />
+        <meta property="og:title" content="FukusITo - 福祉と技術で、未来を照らす。" />
         <meta property="og:description" content="テクノロジーで社会課題を解決し、誰もが活躍できる社会を目指すスタートアップです。" />
         <meta property="og:site_name" content="FukusITo" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://fukusito.net/" />
-        <meta property="twitter:title" content="FukusITo" />
+        <meta property="twitter:title" content="FukusITo - 福祉と技術で、未来を照らす。" />
         <meta property="twitter:description" content="テクノロジーで社会課題を解決し、誰もが活躍できる社会を目指すスタートアップです。" />
         
         {/* Favicon */}
@@ -117,7 +117,7 @@ export const renderer = jsxRenderer(({ children }) => {
                 <ul>
                   <li><a href="#team">チームについて</a></li>
                   <li><a href="/contact">お問い合わせ</a></li>
-                  <li><a href="mailto:contact@fukusito.net">メールでのお問い合わせ</a></li>
+                  <li><a href="mailto:info@fukusito.net">メールでのお問い合わせ</a></li>
                 </ul>
               </div>
               <div className="footer-section">
@@ -125,7 +125,7 @@ export const renderer = jsxRenderer(({ children }) => {
                 <ul>
                   <li><a href="/privacy">プライバシーポリシー</a></li>
                   <li><a href="/terms">利用規約</a></li>
-
+                  <li><a href="/commercial">特定商取引法に基づく表記</a></li>
                 </ul>
               </div>
               <div className="footer-section">

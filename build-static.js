@@ -20,7 +20,6 @@ const pages = [
   { path: '/', filename: 'index.html' },
   { path: '/privacy', filename: 'privacy.html' },
   { path: '/terms', filename: 'terms.html' },
-  { path: '/commercial', filename: 'commercial.html' },
   { path: '/contact', filename: 'contact.html' },
   { path: '/product-helpconnect', filename: 'product-helpconnect.html' }
 ];

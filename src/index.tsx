@@ -305,7 +305,7 @@ app.get('/', (c) => {
               </div>
               <div className="ceo-info">
                 <h3>榊原 悠大</h3>
-                <p className="ceo-title">代表取締役</p>
+                <p className="ceo-title">代表</p>
                 <div className="ceo-details">
                   <p><strong>所属：</strong>名城大学情報工学部4年</p>
                   <p><strong>専攻：</strong>医療情報</p>

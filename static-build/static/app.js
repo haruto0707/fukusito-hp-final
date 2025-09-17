@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeIntersectionObserver();
     initializeAnimations();
     initializeAccessibility();
-    initializeLogoBackgroundRemoval();
     
     // Log performance metrics
     logPerformanceMetrics();
@@ -173,18 +172,8 @@ function logPerformanceMetrics() {
     }
 }
 
-// API Health Check
-async function checkAPIHealth() {
-    try {
-        const response = await fetch('/api/health');
-        const data = await response.json();
-        console.log('✅ API Health:', data);
-    } catch (error) {
-        console.error('❌ API Health Check Failed:', error);
-    }
-}
-
-checkAPIHealth();
+// Static site - no API calls needed
+console.log('✅ Static site loaded successfully!');
 
 // Text logo doesn't need background removal processing
 // Removed image logo background processing code
@@ -247,7 +236,7 @@ function initializeContactForm() {
             );
             
             // Open default email client
-            window.location.href = `mailto:info@fukusito.net?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:contact@fukusito.net?subject=${subject}&body=${body}`;
             
             // Reset form
             contactForm.reset();
@@ -267,13 +256,13 @@ function initializeContactForm() {
     if (categorySelect) {
         categorySelect.addEventListener('change', function() {
             const emailMap = {
-                'general': 'info@fukusito.net',
-                'support': 'support@fukusito.net',
-                'business': 'business@fukusito.net',
-                'privacy': 'legal@fukusito.net'
+                'general': 'contact@fukusito.net',
+                'support': 'contact@fukusito.net',
+                'business': 'contact@fukusito.net',
+                'privacy': 'contact@fukusito.net'
             };
             
-            // This is just for reference - the actual mailto will always use info@fukusito.net
+            // This is just for reference - the actual mailto will always use contact@fukusito.net
             // but we could show a note about which department will handle it
         });
     }

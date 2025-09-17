@@ -172,18 +172,8 @@ function logPerformanceMetrics() {
     }
 }
 
-// API Health Check
-async function checkAPIHealth() {
-    try {
-        const response = await fetch('/api/health');
-        const data = await response.json();
-        console.log('✅ API Health:', data);
-    } catch (error) {
-        console.error('❌ API Health Check Failed:', error);
-    }
-}
-
-checkAPIHealth();
+// Static site - no API calls needed
+console.log('✅ Static site loaded successfully!');
 
 // Text logo doesn't need background removal processing
 // Removed image logo background processing code

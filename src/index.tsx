@@ -7,6 +7,9 @@ const app = new Hono()
 // Serve static files (CSS and JS)
 app.use('/static/*', serveStatic({ root: './public' }))
 
+// Serve favicon
+app.get('/favicon.ico', serveStatic({ root: './public' }))
+
 app.use(renderer)
 
 app.get('/', (c) => {

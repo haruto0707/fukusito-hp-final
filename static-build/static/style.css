@@ -12,8 +12,8 @@ html {
 body {
   font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #ffffff;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 }
 
 /* ===== CSS Custom Properties (Variables) ===== */
@@ -26,6 +26,15 @@ body {
   --accent-color: #FFA726;        /* Light Orange */
   --success-color: #22C55E;       /* Green 500 */
   --danger-color: #EF4444;
+  
+  /* Semantic Colors - Light Mode */
+  --bg-primary: #FFFFFF;          /* Main background */
+  --bg-secondary: #F9FAFB;        /* Secondary background */
+  --text-primary: #111827;        /* Main text */
+  --text-secondary: #6B7280;      /* Secondary text */
+  --text-inverse: #FFFFFF;        /* White text for dark backgrounds */
+  --border-color: #E5E7EB;        /* Border color */
+  --card-bg: #FFFFFF;             /* Card background */
   
   /* Grays */
   --gray-50: #F9FAFB;
@@ -96,7 +105,7 @@ body {
 }
 
 .hero-highlight {
-  color: #FFFFFF;
+  color: var(--text-inverse);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-weight: 900;
 }
@@ -118,7 +127,16 @@ body {
 /* Auto Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark theme color overrides */
+    /* Semantic Colors - Dark Mode */
+    --bg-primary: #0F172A;          /* Very dark blue-gray main background */
+    --bg-secondary: #1E293B;        /* Slate secondary background */
+    --text-primary: #F8FAFC;        /* Almost white main text */
+    --text-secondary: #CBD5E1;      /* Light gray secondary text */
+    --text-inverse: #0F172A;        /* Dark text for light backgrounds */
+    --border-color: #334155;        /* Dark border color */
+    --card-bg: #1E293B;             /* Dark slate card background */
+    
+    /* Dark theme gray overrides */
     --gray-50: #1F2937;   /* Dark background for light sections */
     --gray-100: #374151;  /* Slightly lighter dark */
     --gray-200: #4B5563;  /* Border color in dark */
@@ -131,10 +149,7 @@ body {
     --gray-900: #FFFFFF;  /* Pure white */
   }
 
-  body {
-    background-color: #0F172A; /* Very dark blue-gray */
-    color: #F8FAFC; /* Almost white */
-  }
+  /* Body uses CSS variables defined above */
   
   /* Header in dark mode */
   .header {
@@ -457,7 +472,7 @@ body {
 
 .btn-primary {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-inverse);
 }
 
 .btn-primary:hover {
@@ -474,7 +489,7 @@ body {
 
 .btn-secondary:hover {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-inverse);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -512,7 +527,7 @@ section {
 .hero-section {
   padding-top: calc(80px + var(--space-3xl));
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  color: white;
+  color: var(--text-inverse);
   overflow: hidden;
   min-height: 100vh;
   display: flex;
@@ -566,7 +581,7 @@ section {
 
 .hero-icon {
   font-size: 4rem;
-  color: white;
+  color: var(--text-inverse);
   margin-bottom: var(--space-lg);
 }
 
@@ -585,7 +600,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--text-inverse);
   font-size: var(--text-xl);
 }
 
@@ -624,7 +639,7 @@ section {
 }
 
 .mission-card {
-  background: white;
+  background: var(--card-bg);
   padding: var(--space-2xl);
   border-radius: var(--radius-xl);
   text-align: center;
@@ -647,7 +662,7 @@ section {
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--space-lg);
-  color: white;
+  color: var(--text-inverse);
   font-size: var(--text-2xl);
 }
 
@@ -665,7 +680,7 @@ section {
 
 /* ===== Product Section ===== */
 .product-section {
-  background: white;
+  background: var(--card-bg);
 }
 
 .product-content {
@@ -731,7 +746,7 @@ section {
 .phone-screen {
   width: 100%;
   height: 100%;
-  background: white;
+  background: var(--card-bg);
   border-radius: 30px;
   overflow: hidden;
   position: relative;
@@ -780,7 +795,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--text-inverse);
   font-weight: 600;
   cursor: pointer;
   animation: pulse 2s infinite;
@@ -887,7 +902,7 @@ section {
 .timeline-content {
   flex: 1;
   padding-left: var(--space-xl);
-  background: white;
+  background: var(--card-bg);
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -961,7 +976,7 @@ section {
 
 /* ===== Team Section ===== */
 .team-section {
-  background: white;
+  background: var(--card-bg);
 }
 
 .team-grid {
@@ -971,7 +986,7 @@ section {
 }
 
 .team-card {
-  background: white;
+  background: var(--card-bg);
   border-radius: var(--radius-xl);
   padding: var(--space-2xl);
   text-align: center;
@@ -1025,7 +1040,7 @@ section {
 /* ===== CTA Section ===== */
 .cta-section {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  color: var(--text-inverse);
   text-align: center;
 }
 
@@ -1050,7 +1065,7 @@ section {
 }
 
 .cta-section .btn-primary {
-  background: white;
+  background: var(--card-bg);
   color: var(--primary-color);
 }
 
@@ -1059,12 +1074,12 @@ section {
 }
 
 .cta-section .btn-secondary {
-  border-color: white;
-  color: white;
+  border-color: var(--text-inverse);
+  color: var(--text-inverse);
 }
 
 .cta-section .btn-secondary:hover {
-  background: white;
+  background: var(--card-bg);
   color: var(--primary-color);
 }
 
@@ -1094,7 +1109,7 @@ section {
 .footer-brand-name {
   font-size: 1.8rem;
   font-weight: 800;
-  color: white;
+  color: var(--text-inverse);
   letter-spacing: -0.02em;
   margin: 0;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -1146,7 +1161,7 @@ section {
 }
 
 .footer-section h4 {
-  color: white;
+  color: var(--text-inverse);
   font-size: var(--text-lg);
   font-weight: 600;
   margin-bottom: var(--space-lg);
@@ -1190,7 +1205,7 @@ section {
 
 .social-link:hover {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-inverse);
   transform: translateY(-2px);
 }
 
@@ -1209,7 +1224,7 @@ section {
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
+    background: var(--card-bg);
     flex-direction: column;
     padding: var(--space-lg);
     box-shadow: var(--shadow-lg);
@@ -1366,21 +1381,13 @@ a:focus {
   }
 }
 
-/* Dark mode support (optional - can be expanded) */
-@media (prefers-color-scheme: dark) {
-  .mission-card,
-  .team-card,
-  .timeline-content {
-    background: var(--gray-800);
-    color: var(--gray-100);
-  }
-}
+/* Comprehensive dark mode support is handled by CSS variables above */
 
 /* ===== Product Detail Page Styles ===== */
 .product-hero {
   padding-top: calc(80px + var(--space-2xl));
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  color: var(--text-inverse);
   padding-bottom: var(--space-3xl);
 }
 
@@ -1398,7 +1405,7 @@ a:focus {
 }
 
 .breadcrumb a:hover {
-  color: white;
+  color: var(--text-inverse);
 }
 
 .breadcrumb span {
@@ -1433,18 +1440,18 @@ a:focus {
 
 .badge-free {
   background: var(--success-color);
-  color: white;
+  color: var(--text-inverse);
 }
 
 .badge-featured {
-  background: white;
+  background: var(--card-bg);
   color: var(--primary-color);
 }
 
 /* Product Overview */
 .product-overview {
   padding: var(--space-3xl) 0;
-  background: white;
+  background: var(--card-bg);
 }
 
 .overview-grid {
@@ -1514,7 +1521,7 @@ a:focus {
 .phone-screen {
   width: 100%;
   height: 100%;
-  background: white;
+  background: var(--card-bg);
   border-radius: 30px;
   overflow: hidden;
   position: relative;
@@ -1572,7 +1579,7 @@ a:focus {
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-md);
-  background: white;
+  background: var(--card-bg);
   border: 2px solid var(--gray-200);
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -1607,7 +1614,7 @@ a:focus {
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-sm);
-  background: white;
+  background: var(--card-bg);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
 }
@@ -1677,7 +1684,7 @@ a:focus {
   width: 32px;
   height: 32px;
   background: var(--primary-color);
-  color: white;
+  color: var(--text-inverse);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1690,7 +1697,7 @@ a:focus {
 .step-icon {
   width: 80px;
   height: 80px;
-  background: white;
+  background: var(--card-bg);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1721,7 +1728,7 @@ a:focus {
 /* Features Detail */
 .features-detail {
   padding: var(--space-3xl) 0;
-  background: white;
+  background: var(--card-bg);
 }
 
 .features-grid {
@@ -1733,7 +1740,7 @@ a:focus {
 .feature-card {
   text-align: center;
   padding: var(--space-2xl);
-  background: white;
+  background: var(--card-bg);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--gray-100);
@@ -1754,7 +1761,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--space-lg);
-  color: white;
+  color: var(--text-inverse);
   font-size: var(--text-2xl);
 }
 
@@ -1774,7 +1781,7 @@ a:focus {
 .statistics {
   padding: var(--space-3xl) 0;
   background: var(--gray-900);
-  color: white;
+  color: var(--text-inverse);
 }
 
 .stats-grid {
@@ -1804,7 +1811,7 @@ a:focus {
 .product-cta {
   padding: var(--space-3xl) 0;
   background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-  color: white;
+  color: var(--text-inverse);
   text-align: center;
 }
 
@@ -1866,7 +1873,7 @@ a:focus {
 }
 
 .ceo-profile {
-  background: white;
+  background: var(--card-bg);
   padding: var(--space-2xl);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
@@ -1888,7 +1895,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  color: white;
+  color: var(--text-inverse);
   font-size: var(--text-4xl);
 }
 
@@ -1923,7 +1930,7 @@ a:focus {
 }
 
 .story-section {
-  background: white;
+  background: var(--card-bg);
   padding: var(--space-2xl);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
@@ -1960,7 +1967,7 @@ a:focus {
 /* ===== Activities Section ===== */
 .activities-section {
   padding: var(--space-3xl) 0;
-  background: white;
+  background: var(--card-bg);
 }
 
 .activities-grid {
@@ -2004,7 +2011,7 @@ a:focus {
 }
 
 .activity-item {
-  background: white;
+  background: var(--card-bg);
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -2027,7 +2034,7 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--text-inverse);
   font-size: var(--text-xl);
   flex-shrink: 0;
 }
@@ -2089,7 +2096,7 @@ a:focus {
 /* ===== Legal Pages Styles ===== */
 .legal-hero {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  color: var(--text-inverse);
   padding: var(--space-3xl) 0 var(--space-2xl);
   text-align: center;
 }
@@ -2120,7 +2127,7 @@ a:focus {
 .legal-document {
   max-width: 800px;
   margin: 0 auto;
-  background: white;
+  background: var(--card-bg);
   padding: var(--space-2xl);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -2279,7 +2286,7 @@ a:focus {
 }
 
 .contact-card {
-  background: white;
+  background: var(--card-bg);
   padding: var(--space-xl);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -2300,7 +2307,7 @@ a:focus {
 
 .contact-icon i {
   font-size: 1.2rem;
-  color: white;
+  color: var(--text-inverse);
 }
 
 .contact-card h3 {
@@ -2336,7 +2343,7 @@ a:focus {
 
 /* Contact Form Styles */
 .contact-form-section {
-  background: white;
+  background: var(--card-bg);
   padding: var(--space-2xl);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);

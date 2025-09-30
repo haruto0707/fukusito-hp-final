@@ -313,6 +313,18 @@ body {
   .activity-desc {
     color: #CBD5E1;
   }
+  
+  /* Gradient background sections always have white text */
+  .hero-section,
+  .hero-section *,
+  .cta-section,
+  .cta-section *,
+  .product-hero,
+  .product-hero *,
+  .legal-hero,
+  .legal-hero * {
+    color: #FFFFFF !important;
+  }
 }
 
 .sr-only {
@@ -527,9 +539,19 @@ section {
 .hero-section {
   padding-top: calc(80px + var(--space-3xl));
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  color: var(--text-inverse);
+  color: #FFFFFF !important;
   overflow: hidden;
   min-height: 100vh;
+}
+
+/* Hero section white text override */
+.hero-section,
+.hero-section *,
+.hero-section h1,
+.hero-section p,
+.hero-section .hero-title,
+.hero-section .hero-description {
+  color: #FFFFFF !important;
   display: flex;
   align-items: center;
 }
@@ -1040,8 +1062,17 @@ section {
 /* ===== CTA Section ===== */
 .cta-section {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: var(--text-inverse);
+  color: #FFFFFF !important;
   text-align: center;
+}
+
+/* CTA section white text override */
+.cta-section,
+.cta-section *,
+.cta-section h1,
+.cta-section h2,
+.cta-section p {
+  color: #FFFFFF !important;
 }
 
 .cta-content h2 {
@@ -1387,8 +1418,17 @@ a:focus {
 .product-hero {
   padding-top: calc(80px + var(--space-2xl));
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: var(--text-inverse);
+  color: #FFFFFF !important;
   padding-bottom: var(--space-3xl);
+}
+
+/* Product hero white text override */
+.product-hero,
+.product-hero *,
+.product-hero h1,
+.product-hero h2,
+.product-hero p {
+  color: #FFFFFF !important;
 }
 
 .breadcrumb {
@@ -2096,9 +2136,18 @@ a:focus {
 /* ===== Legal Pages Styles ===== */
 .legal-hero {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: var(--text-inverse);
+  color: #FFFFFF !important;
   padding: var(--space-3xl) 0 var(--space-2xl);
   text-align: center;
+}
+
+/* Legal hero white text override */
+.legal-hero,
+.legal-hero *,
+.legal-hero h1,
+.legal-hero h2,
+.legal-hero p {
+  color: #FFFFFF !important;
 }
 
 .legal-title {

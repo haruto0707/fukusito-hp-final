@@ -144,7 +144,7 @@ export const renderer = jsxRenderer(({ children }) => {
               </div>
             </div>
             <div className="footer-bottom">
-              <p>&copy; 2024 FukusITo. All rights reserved.</p>
+              <p>&copy; 2025 FukusITo. All rights reserved.</p>
             </div>
           </div>
         </footer>

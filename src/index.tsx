@@ -894,7 +894,7 @@ app.get('/product-helpconnect', (c) => {
           </div>
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number">389<span className="stat-unit">名</span></div>
+              <div className="stat-number">280<span className="stat-unit">名</span></div>
               <div className="stat-label">参加者数</div>
               <div className="stat-note">2025年6月19日〜27日</div>
             </div>

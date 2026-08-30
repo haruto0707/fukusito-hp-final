@@ -1788,10 +1788,21 @@ a:focus {
 }
 
 .steps-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
   gap: var(--space-xl);
-  align-items: center;
+}
+
+.steps-grid .step-card {
+  flex: 1 1 200px;
+  max-width: 280px;
+}
+
+.steps-grid .step-arrow {
+  flex: 0 0 auto;
+  align-self: center;
 }
 
 .step-card {
@@ -1964,8 +1975,13 @@ a:focus {
   }
   
   .steps-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: var(--space-2xl);
+  }
+
+  .steps-grid .step-card {
+    max-width: none;
+    width: 100%;
   }
   
   .step-arrow {

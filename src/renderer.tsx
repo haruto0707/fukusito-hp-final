@@ -7,21 +7,21 @@ export const renderer = jsxRenderer(({ children }) => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>FukusITo</title>
-        <meta name="description" content="FukusIToは、テクノロジーで社会課題を解決するスタートアップです。HELP CONNECTアプリで、障害のある方の外出支援を行っています。" />
-        <meta name="keywords" content="福祉,アクセシビリティ,バリアフリー,アプリ,スタートアップ,HELP CONNECT,障害者支援" />
+        <meta name="description" content="FukusIToは、テクノロジーで社会課題を解決するスタートアップです。HELP CONNECTは、イベント会場で困っている方と、近くにいる支援者をつなぐアプリです。" />
+        <meta name="keywords" content="福祉,アクセシビリティ,バリアフリー,アプリ,スタートアップ,HELP CONNECT,障害者支援,イベント,合理的配慮" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fukusito.net/" />
         <meta property="og:title" content="FukusITo" />
-        <meta property="og:description" content="テクノロジーで社会課題を解決し、誰もが活躍できる社会を目指すスタートアップです。" />
+        <meta property="og:description" content="イベント会場で困っている方と、近くにいる支援者をつなぐアプリ HELP CONNECT を開発しています。" />
         <meta property="og:site_name" content="FukusITo" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://fukusito.net/" />
         <meta property="twitter:title" content="FukusITo" />
-        <meta property="twitter:description" content="テクノロジーで社会課題を解決し、誰もが活躍できる社会を目指すスタートアップです。" />
+        <meta property="twitter:description" content="イベント会場で困っている方と、近くにいる支援者をつなぐアプリ HELP CONNECT を開発しています。" />
         
         {/* Favicon */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -68,8 +68,8 @@ export const renderer = jsxRenderer(({ children }) => {
                   </a>
                 </div>
                 <div className="nav-menu" id="nav-menu">
-                  <a href="#product" className="nav-link">製品</a>
-                  <a href="#team" className="nav-link">チーム</a>
+                  <a href="/#product" className="nav-link">製品</a>
+                  <a href="/#team" className="nav-link">チーム</a>
                   <a href="/product-helpconnect" className="nav-link">詳細</a>
                   <a href="mailto:contact@fukusito.net" className="nav-link nav-cta">
                     <i className="fas fa-envelope"></i>
@@ -108,14 +108,14 @@ export const renderer = jsxRenderer(({ children }) => {
                 <h4>製品・サービス</h4>
                 <ul>
                   <li><a href="/product-helpconnect">HELP CONNECT</a></li>
-                  <li><a href="#product">製品概要</a></li>
-                  <li><a href="#team">開発チーム</a></li>
+                  <li><a href="/#product">製品概要</a></li>
+                  <li><a href="/#team">開発チーム</a></li>
                 </ul>
               </div>
               <div className="footer-section">
                 <h4>会社情報</h4>
                 <ul>
-                  <li><a href="#team">チームについて</a></li>
+                  <li><a href="/#team">チームについて</a></li>
                   <li><a href="/contact">お問い合わせ</a></li>
                   <li><a href="mailto:contact@fukusito.net">メールでのお問い合わせ</a></li>
                 </ul>
@@ -144,7 +144,7 @@ export const renderer = jsxRenderer(({ children }) => {
               </div>
             </div>
             <div className="footer-bottom">
-              <p>&copy; 2025 FukusITo. All rights reserved.</p>
+              <p>&copy; 2026 FukusITo. All rights reserved.</p>
             </div>
           </div>
         </footer>

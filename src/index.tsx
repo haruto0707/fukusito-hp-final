@@ -92,7 +92,7 @@ app.get('/', (c) => {
           <div className="section-header">
             <h2 className="section-title">HELP CONNECT</h2>
             <p className="section-subtitle">
-              外出先での「ちょっとした困りごと」を解決するアプリ
+              イベント会場での「ちょっとした困りごと」を、その場にいる誰かとつなぐ
             </p>
           </div>
           <div className="product-content">
@@ -101,22 +101,22 @@ app.get('/', (c) => {
                 <div className="feature-item">
                   <i className="fas fa-map-marker-alt"></i>
                   <div>
-                    <h4>位置情報で最適なマッチング</h4>
-                    <p>GPS機能を活用し、お困りの方と近くにいるサポーターを瞬時にマッチング</p>
+                    <h4>会場のなかで、近くの人に届く</h4>
+                    <p>困りごとを投稿すると、同じ会場にいる支援者に届きます。階段を使わない経路が必要、といった条件も一緒に伝わります</p>
                   </div>
                 </div>
                 <div className="feature-item">
-                  <i className="fas fa-comments"></i>
+                  <i className="fas fa-compass"></i>
                   <div>
-                    <h4>リアルタイムコミュニケーション</h4>
-                    <p>アプリ内チャットで安心・安全なやり取りが可能</p>
+                    <h4>出会うまでを案内</h4>
+                    <p>相手までの距離と方角、到着の目安を表示。混雑した会場でもすれ違わずに合流できます</p>
                   </div>
                 </div>
                 <div className="feature-item">
-                  <i className="fas fa-star"></i>
+                  <i className="fas fa-elevator"></i>
                   <div>
-                    <h4>評価システム</h4>
-                    <p>利用者・サポーター双方の評価システムで信頼性を確保</p>
+                    <h4>設備の場所がわかる</h4>
+                    <p>エレベーター、多目的トイレ、救護室などを地図と一覧で確認できます。人に頼らず解決できることは、自分で解決できます</p>
                   </div>
                 </div>
               </div>
@@ -142,8 +142,8 @@ app.get('/', (c) => {
                       <div className="nearby-helpers">
                         <div className="helper-item">
                           <div className="helper-avatar"></div>
-                          <span>田中さん</span>
-                          <span className="distance">100m</span>
+                          <span>支援者が向かっています</span>
+                          <span className="distance">120m</span>
                         </div>
                       </div>
                     </div>
@@ -198,6 +198,16 @@ app.get('/', (c) => {
                     <span>実施回数</span>
                   </span>
                 </div>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-date">2026年</div>
+              <div className="timeline-content">
+                <h4>アプリを作り直し、会場での運用に備える</h4>
+                <p>
+                  実証実験で見えた課題をもとに、要求仕様書をまとめ直してアプリを再構築しました。
+                  設備の地図、合流までの案内、音声入力、ログイン不要の来場者モードなどを新たに搭載しています。
+                </p>
               </div>
             </div>
           </div>
@@ -502,12 +512,11 @@ app.get('/product-helpconnect', (c) => {
             </div>
             <h1 className="product-title">
               HELP CONNECT
-              <span className="product-subtitle">外出先での「ちょっとした困りごと」を解決するアプリ</span>
+              <span className="product-subtitle">イベント会場での「ちょっとした困りごと」を、その場にいる誰かとつなぐ</span>
             </h1>
             <div className="product-badges">
-              <span className="badge badge-new">新機能</span>
               <span className="badge badge-free">無料</span>
-              <span className="badge badge-featured">注目</span>
+              <span className="badge badge-featured">実証実験中</span>
             </div>
           </div>
         </div>
@@ -520,25 +529,34 @@ app.get('/product-helpconnect', (c) => {
             <div className="overview-content">
               <h2>製品概要</h2>
               <p className="lead">
-                HELP CONNECTは、障害のある方が外出先で困った際に、近くにいるサポーターに助けを求めることができるマッチングアプリです。
-                リアルタイムの位置情報を活用し、安心・安全なコミュニケーションを実現します。
+                大学のオープンキャンパス、展示会、スポーツ観戦。
+                こうした会場では、案内板が読み取りにくかったり、エレベーターが見つからなかったり、
+                荷物や扉のちょっとしたことで足が止まります。
+                スタッフを探して歩き回るほどではないけれど、誰かがいれば数十秒で済む。
+                HELP CONNECTは、その数十秒を、同じ会場にいる人とつなぐアプリです。
+              </p>
+              <p>
+                会場という区切りがあるからこそ、相手はすぐ近くにいて、
+                助けた人もそのまま自分の予定に戻れます。
+                駅や街なかのように「どこから来るか分からない」状態を避けられることが、
+                この仕組みが成り立つ条件だと考えています。
               </p>
               <ul className="feature-list">
                 <li>
                   <i className="fas fa-map-marker-alt"></i>
-                  <span>GPS位置情報による最適なマッチング</span>
+                  <span>同じ会場にいる人にだけ、困りごとが届く</span>
                 </li>
                 <li>
-                  <i className="fas fa-shield-alt"></i>
-                  <span>安心・安全なコミュニケーション機能</span>
+                  <i className="fas fa-compass"></i>
+                  <span>合流までの距離・方角・到着の目安を表示</span>
                 </li>
                 <li>
-                  <i className="fas fa-users"></i>
-                  <span>サポーター・利用者双方向の評価システム</span>
+                  <i className="fas fa-elevator"></i>
+                  <span>エレベーターや多目的トイレの場所を地図で確認</span>
                 </li>
                 <li>
-                  <i className="fas fa-clock"></i>
-                  <span>リアルタイム通知とレスポンス</span>
+                  <i className="fas fa-user-clock"></i>
+                  <span>登録なしでも使える来場者モード</span>
                 </li>
               </ul>
             </div>
@@ -571,27 +589,16 @@ app.get('/product-helpconnect', (c) => {
                             </div>
                           </div>
                           <div className="nearby-supporters">
-                            <h5>近くのサポーター</h5>
+                            <h5>合流まで</h5>
                             <div className="supporter-list">
                               <div className="supporter-item">
                                 <div className="supporter-avatar"></div>
                                 <div className="supporter-info">
-                                  <span className="name">田中さん</span>
-                                  <span className="distance">約100m</span>
+                                  <span className="name">支援者が向かっています</span>
+                                  <span className="distance">約120m・北東</span>
                                   <div className="rating">
-                                    <i className="fas fa-star"></i>
-                                    <span>4.8</span>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="supporter-item">
-                                <div className="supporter-avatar"></div>
-                                <div className="supporter-info">
-                                  <span className="name">佐藤さん</span>
-                                  <span className="distance">約200m</span>
-                                  <div className="rating">
-                                    <i className="fas fa-star"></i>
-                                    <span>4.9</span>
+                                    <i className="fas fa-clock"></i>
+                                    <span>まもなく到着</span>
                                   </div>
                                 </div>
                               </div>
@@ -613,16 +620,16 @@ app.get('/product-helpconnect', (c) => {
         <div className="container">
           <div className="section-header">
             <h2>ご利用の流れ</h2>
-            <p>簡単3ステップで、必要なサポートを受けることができます</p>
+            <p>助けを求めてから、お礼を伝えるまで</p>
           </div>
           <div className="steps-grid">
             <div className="step-card">
               <div className="step-number">1</div>
               <div className="step-icon">
-                <i className="fas fa-mobile-alt"></i>
+                <i className="fas fa-hand-paper"></i>
               </div>
-              <h4>アプリを開く</h4>
-              <p>HELP CONNECTアプリを起動し、現在地を確認します</p>
+              <h4>困りごとを送る</h4>
+              <p>種類を選び、必要なら補足を書きます。文字が打ちにくいときは音声でも入力できます</p>
             </div>
             <div className="step-arrow">
               <i className="fas fa-arrow-right"></i>
@@ -630,10 +637,10 @@ app.get('/product-helpconnect', (c) => {
             <div className="step-card">
               <div className="step-number">2</div>
               <div className="step-icon">
-                <i className="fas fa-hand-paper"></i>
+                <i className="fas fa-bell"></i>
               </div>
-              <h4>サポートを要請</h4>
-              <p>必要なサポートの種類を選択し、助けを求めます</p>
+              <h4>近くの人が引き受ける</h4>
+              <p>同じ会場にいる支援者に届きます。手が空いている人が引き受け、通知でお知らせします</p>
             </div>
             <div className="step-arrow">
               <i className="fas fa-arrow-right"></i>
@@ -641,10 +648,21 @@ app.get('/product-helpconnect', (c) => {
             <div className="step-card">
               <div className="step-number">3</div>
               <div className="step-icon">
-                <i className="fas fa-handshake"></i>
+                <i className="fas fa-compass"></i>
               </div>
-              <h4>サポーターと連携</h4>
-              <p>近くのサポーターとマッチングし、安全にサポートを受けます</p>
+              <h4>合流する</h4>
+              <p>距離と方角、到着の目安が出ます。行き違いそうなときはチャットで補えます</p>
+            </div>
+            <div className="step-arrow">
+              <i className="fas fa-arrow-right"></i>
+            </div>
+            <div className="step-card">
+              <div className="step-number">4</div>
+              <div className="step-icon">
+                <i className="fas fa-check"></i>
+              </div>
+              <h4>完了して、お礼を伝える</h4>
+              <p>お互いに評価します。気になることがあれば、その場から運営に報告できます</p>
             </div>
           </div>
         </div>
@@ -655,67 +673,73 @@ app.get('/product-helpconnect', (c) => {
         <div className="container">
           <div className="section-header">
             <h2>主要機能</h2>
-            <p>HELP CONNECTの充実した機能をご紹介します</p>
+            <p>会場で実際に起きることに合わせて作っています</p>
           </div>
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">
                 <i className="fas fa-map-marker-alt"></i>
               </div>
-              <h4>位置情報マッチング</h4>
+              <h4>会場のなかでのマッチング</h4>
               <p>
-                GPS機能を活用して、お困りの方の近くにいるサポーターを自動で検索・マッチング。
-                効率的で迅速な支援を実現します。
+                困りごとは、同じ会場にいる支援者にだけ届きます。
+                「階段を使わない経路が必要」といった条件も一緒に伝わるので、
+                引き受ける前に対応できるかを判断できます。
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <i className="fas fa-compass"></i>
+              </div>
+              <h4>合流までの案内</h4>
+              <p>
+                お互いの距離と方角、到着の目安を表示します。
+                混雑した会場では、居場所を言葉で説明するのが難しいためです。
+                方角表示と地図を切り替えられます。
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <i className="fas fa-elevator"></i>
+              </div>
+              <h4>設備の場所</h4>
+              <p>
+                エレベーター、スロープ、多目的トイレ、車椅子席、救護室を
+                地図とリストで確認できます。
+                人に頼らず解決できることは、自分で解決できたほうがいいと考えています。
               </p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
                 <i className="fas fa-comments"></i>
               </div>
-              <h4>安全なチャット機能</h4>
+              <h4>チャットと音声入力</h4>
               <p>
-                アプリ内チャットシステムにより、個人情報を交換することなく、
-                安心してコミュニケーションを取ることができます。
+                連絡先を交換せずにやり取りできます。
+                よく使う言い回しは定型文から選べ、
+                文字が打ちにくいときは声で入力できます。
               </p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-user-clock"></i>
               </div>
-              <h4>相互評価システム</h4>
+              <h4>登録なしで使える来場者モード</h4>
               <p>
-                利用者・サポーター双方の評価システムにより、
-                信頼性の高いコミュニティを維持します。
+                その日だけの来場者に、アカウント作成は負担にしかなりません。
+                登録せずに助けを求められます。
+                ただし支援する側になるには登録が必要です。
               </p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <i className="fas fa-bell"></i>
+                <i className="fas fa-shield-halved"></i>
               </div>
-              <h4>リアルタイム通知</h4>
+              <h4>評価と通報、運営の見守り</h4>
               <p>
-                プッシュ通知機能により、サポート要請や応答を
-                リアルタイムで受け取ることができます。
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <i className="fas fa-history"></i>
-              </div>
-              <h4>利用履歴管理</h4>
-              <p>
-                過去の利用履歴を確認でき、よく利用する場所や
-                サポーターとの関係性を把握できます。
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <i className="fas fa-cog"></i>
-              </div>
-              <h4>カスタマイズ設定</h4>
-              <p>
-                個人のニーズに合わせて通知設定やプロフィール情報を
-                カスタマイズできます。
+                終わったあとにお互いを評価します。
+                気になることがあればその場から運営に報告でき、
+                運営は対応が滞っている案件を一覧で把握できます。
               </p>
             </div>
           </div>
@@ -739,8 +763,8 @@ app.get('/product-helpconnect', (c) => {
               <div className="stat-label">満足度</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">24/7</div>
-              <div className="stat-label">サービス提供時間</div>
+              <div className="stat-number">6種</div>
+              <div className="stat-label">対応する困りごと</div>
             </div>
           </div>
         </div>
@@ -756,9 +780,9 @@ app.get('/product-helpconnect', (c) => {
               サービスの詳細やご質問は、お気軽にお問い合わせください。
             </p>
             <div className="cta-buttons">
-              <a href="/product-helpconnect" className="btn btn-primary btn-large">
+              <a href="/" className="btn btn-primary btn-large">
                 <i className="fas fa-info-circle"></i>
-                FukusIToのサービスについて
+                FukusIToについて
               </a>
               <a href="mailto:contact@fukusito.net" className="btn btn-secondary btn-large">
                 <i className="fas fa-envelope"></i>

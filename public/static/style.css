@@ -2700,3 +2700,250 @@ a:focus {
     font-size: 0.75rem;
   }
 }
+/* ==========================================================================
+   HELP CONNECT 製品ページの追加セクション
+   課題 / ユースケース / 安全 / 実証結果の出典 / 会場運営者向け
+   ========================================================================== */
+
+/* --- 課題 ------------------------------------------------------------- */
+.problem-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-secondary);
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.problem-figure {
+  text-align: center;
+  padding: var(--space-xl);
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 100px;
+}
+
+.problem-number {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--primary-color);
+}
+
+.problem-unit {
+  font-size: 2.5rem;
+  margin-left: 0.1em;
+}
+
+.problem-caption {
+  margin-top: var(--space-md);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.problem-source {
+  margin-top: var(--space-sm);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.problem-text p {
+  margin-bottom: var(--space-lg);
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+
+.problem-text .problem-lead {
+  font-weight: 700;
+  color: var(--text-primary);
+  border-left: 4px solid var(--primary-color);
+  padding-left: var(--space-lg);
+}
+
+/* --- こんなときに ------------------------------------------------------ */
+.usecase-section {
+  padding: var(--space-3xl) 0;
+}
+
+.usecase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-lg);
+}
+
+.usecase-card {
+  padding: var(--space-xl);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.usecase-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.usecase-card i {
+  font-size: var(--text-2xl);
+  color: var(--primary-color);
+}
+
+.usecase-card h4 {
+  margin: var(--space-md) 0 var(--space-sm);
+  color: var(--text-primary);
+}
+
+.usecase-card p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.usecase-note,
+.venue-note,
+.evidence-note {
+  margin-top: var(--space-xl);
+  font-size: var(--text-sm);
+  line-height: 1.9;
+  color: var(--text-secondary);
+  max-width: 46rem;
+}
+
+/* --- 安全のために ------------------------------------------------------ */
+.safety-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-secondary);
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.safety-card {
+  padding: var(--space-xl);
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.safety-card h4 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.safety-card h4 i {
+  color: var(--primary-color);
+  flex: 0 0 auto;
+}
+
+.safety-card p {
+  font-size: var(--text-sm);
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+
+/* --- 実証結果の補足 ---------------------------------------------------- */
+.stat-unit {
+  font-size: 0.5em;
+  margin-left: 0.1em;
+}
+
+.stat-note {
+  margin-top: var(--space-xs);
+  font-size: var(--text-xs);
+  opacity: 0.75;
+}
+
+.evidence-note {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* 実績セクションは色のついた背景。既定の淡い文字色だと読めないため、
+     この中だけ明るい文字に上書きする（コントラスト比 1.48 → 10 以上）。 */
+  color: var(--text-inverse);
+  opacity: 0.9;
+}
+
+/* --- 会場運営者の方へ -------------------------------------------------- */
+.venue-section {
+  padding: var(--space-3xl) 0;
+}
+
+.venue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-xl);
+}
+
+.venue-item h4 {
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--text-primary);
+}
+
+.venue-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.venue-item li {
+  position: relative;
+  padding-left: 1.4em;
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-sm);
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.venue-item li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 0.8em;
+}
+
+.venue-note {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.venue-cta {
+  margin-top: var(--space-2xl);
+  text-align: center;
+}
+
+/* --- 狭い画面 ---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .problem-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .problem-figure {
+    position: static;
+  }
+
+  .problem-number {
+    font-size: 3.5rem;
+  }
+
+  .problem-unit {
+    font-size: 1.75rem;
+  }
+}

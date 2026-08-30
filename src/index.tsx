@@ -522,6 +522,42 @@ app.get('/product-helpconnect', (c) => {
         </div>
       </section>
 
+      {/* Problem */}
+      <section className="problem-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">声をかけられないのは、冷たいからではない</h2>
+          </div>
+          <div className="problem-grid">
+            <div className="problem-figure">
+              <div className="problem-number">71<span className="problem-unit">%</span></div>
+              <p className="problem-caption">見知らぬ人に声をかけることに抵抗がある</p>
+              <p className="problem-source">名城大学での実証実験・体験前の回答（2025年6月・n=134）</p>
+            </div>
+            <div className="problem-text">
+              <p>
+                実証実験で聞いたところ、「状況によるが、少し勇気がいる」が44%、
+                「かなり抵抗があり、できれば避けたい」が23%でした。
+              </p>
+              <p>
+                助けたくない人が多いわけではありません。
+                声をかけていいのか、かえって失礼にならないか、自分に何ができるのか。
+                決めかねているうちに、その場を通り過ぎてしまいます。
+              </p>
+              <p>
+                困っている側にも同じ迷いがあります。
+                誰に頼めばいいか分からず、忙しそうな人を呼び止めるのも気が引ける。
+                きっかけがないまま、どちらもその場を離れていきます。
+              </p>
+              <p className="problem-lead">
+                HELP CONNECTは、この一歩を代わりに踏み出すためのアプリです。
+                助けが必要だと先に表明してもらうことで、声をかける側の迷いをなくします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Product Overview */}
       <section className="product-overview">
         <div className="container">
@@ -668,6 +704,47 @@ app.get('/product-helpconnect', (c) => {
         </div>
       </section>
 
+      {/* Use Cases */}
+      <section className="usecase-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>こんなときに</h2>
+            <p>体験会や実証実験で、実際に挙がった場面です</p>
+          </div>
+          <div className="usecase-grid">
+            <div className="usecase-card">
+              <i className="fas fa-wheelchair"></i>
+              <h4>移動</h4>
+              <p>「車椅子で、階段しか見つけられず階の移動ができない」</p>
+            </div>
+            <div className="usecase-card">
+              <i className="fas fa-map-signs"></i>
+              <h4>案内</h4>
+              <p>「初めて行く場所で、トイレの場所がわからない」</p>
+            </div>
+            <div className="usecase-card">
+              <i className="fas fa-box"></i>
+              <h4>搬送補助</h4>
+              <p>「怪我をして、荷物が運べない」</p>
+            </div>
+            <div className="usecase-card">
+              <i className="fas fa-baby-carriage"></i>
+              <h4>ベビーカー</h4>
+              <p>「ベビーカーや杖で手がふさがり、大きな荷物が持てない」</p>
+            </div>
+            <div className="usecase-card">
+              <i className="fas fa-question-circle"></i>
+              <h4>その他</h4>
+              <p>「一人で来ていて、周りに頼れる人がいない」</p>
+            </div>
+          </div>
+          <p className="usecase-note">
+            アプリではこの5種類から選んで送ります。
+            細かく分けすぎると選ぶのに迷い、大まかすぎると引き受ける側が判断できないためです。
+          </p>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="features-detail">
         <div className="container">
@@ -746,26 +823,149 @@ app.get('/product-helpconnect', (c) => {
         </div>
       </section>
 
+      {/* Safety */}
+      <section className="safety-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>安全のために決めていること</h2>
+            <p>
+              中間発表で「助ける側が必ずしも『いい人』とは限らないのが怖い」という
+              ご指摘をいただきました。もっともな懸念だと考えています。
+            </p>
+          </div>
+          <div className="safety-grid">
+            <div className="safety-card">
+              <h4><i className="fas fa-map-marker-alt"></i> 会場の外には広げない</h4>
+              <p>
+                困りごとが届くのは、同じ会場にいる人だけです。
+                どこから誰が来るか分からない状態を作らないことが、
+                この仕組みが成り立つ前提だと考えています。
+              </p>
+            </div>
+            <div className="safety-card">
+              <h4><i className="fas fa-user-shield"></i> 連絡先を交換しない</h4>
+              <p>
+                やり取りはアプリの中だけで完結します。
+                電話番号やSNSのアカウントを渡す必要はありません。
+                位置情報も、必要な精度まで粗くして共有します。
+              </p>
+            </div>
+            <div className="safety-card">
+              <h4><i className="fas fa-id-card"></i> 支援する側には登録が必要</h4>
+              <p>
+                助けを求めるだけなら登録は要りませんが、
+                支援する側になるには登録が必要です。
+                身元をたどれない人を、支援に差し向けないためです。
+              </p>
+            </div>
+            <div className="safety-card">
+              <h4><i className="fas fa-flag"></i> 通報と、運営の見守り</h4>
+              <p>
+                気になることがあれば、その場から運営に報告できます。
+                運営は対応が滞っている案件を一覧で把握でき、
+                必要なら会場スタッフが引き取ります。
+              </p>
+            </div>
+            <div className="safety-card">
+              <h4><i className="fas fa-ban"></i> 引き受けないことを決めている</h4>
+              <p>
+                医療行為、酒類の提供、資格が必要な行為はお願いできません。
+                善意で引き受けた人が責任を負う事態を避けるためです。
+              </p>
+            </div>
+            <div className="safety-card">
+              <h4><i className="fas fa-coins"></i> 現金のやり取りをしない</h4>
+              <p>
+                支援へのお礼はポイントで、会場内の特典と引き換えます。
+                現金や換金できるものは扱いません。
+                労働の対価になると、別の法律の検討が必要になるためです。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Statistics */}
       <section className="statistics">
         <div className="container">
+          <div className="section-header">
+            <h2>実証実験でわかったこと</h2>
+            <p>2025年6月、名城大学の授業内で実施しました</p>
+          </div>
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number">280+</div>
-              <div className="stat-label">実証実験参加者</div>
+              <div className="stat-number">389<span className="stat-unit">名</span></div>
+              <div className="stat-label">参加者数</div>
+              <div className="stat-note">2025年6月19日〜27日</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">3回</div>
-              <div className="stat-label">実施回数</div>
+              <div className="stat-number">71<span className="stat-unit">%</span></div>
+              <div className="stat-label">声をかけるのに抵抗がある</div>
+              <div className="stat-note">体験前・n=134</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">95%</div>
-              <div className="stat-label">満足度</div>
+              <div className="stat-number">75<span className="stat-unit">%</span></div>
+              <div className="stat-label">体験後、ハードルが下がった</div>
+              <div className="stat-note">n=102</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">6種</div>
-              <div className="stat-label">対応する困りごと</div>
+              <div className="stat-number">82<span className="stat-unit">%</span></div>
+              <div className="stat-label">「声をかけたい」が前向きに</div>
+              <div className="stat-note">n=82</div>
             </div>
+          </div>
+          <p className="evidence-note">
+            設問ごとに回答数が異なるのは、授業内のライブアンケートで、
+            回によって回答者が入れ替わったためです。
+            別途おこなった体験会（2025年1〜2月・n=13）では、
+            満足度92%、「今後も使いたい」92%という回答を得ています。
+          </p>
+        </div>
+      </section>
+
+      {/* For Venues */}
+      <section className="venue-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>会場を運営されている方へ</h2>
+            <p>大学、展示会場、スタジアム、商業施設などでの導入を想定しています</p>
+          </div>
+          <div className="venue-grid">
+            <div className="venue-item">
+              <h4>ご用意いただくもの</h4>
+              <ul>
+                <li>会場の範囲（中心と半径）</li>
+                <li>エレベーター・多目的トイレ・救護室などの位置</li>
+                <li>対応が滞ったときに引き取るスタッフの連絡先</li>
+              </ul>
+            </div>
+            <div className="venue-item">
+              <h4>来場者にお願いすること</h4>
+              <ul>
+                <li>助けを求めるだけなら、登録は不要です</li>
+                <li>支援する側として参加する方には登録をお願いします</li>
+                <li>会場の外に出ると、案件は表示されなくなります</li>
+              </ul>
+            </div>
+            <div className="venue-item">
+              <h4>運営画面でわかること</h4>
+              <ul>
+                <li>いま進行中の案件と、それぞれの経過時間</li>
+                <li>応答が遅れている案件</li>
+                <li>通報の内容と対応状況</li>
+              </ul>
+            </div>
+          </div>
+          <p className="venue-note">
+            提供時間は5:00〜22:00を想定し、深夜帯の運用は行いません。
+            また、個人宅や許可を得ていない店舗など、
+            誰もが立ち入れるわけではない場所は対象外としています。
+          </p>
+          <div className="venue-cta">
+            <a href="mailto:contact@fukusito.net?subject=HELP CONNECT の導入について" className="btn btn-primary btn-large">
+              <i className="fas fa-envelope"></i>
+              導入について相談する
+            </a>
           </div>
         </div>
       </section>
